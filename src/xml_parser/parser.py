@@ -7,8 +7,6 @@ Table = namedtuple('Table', 'header')  # TypeVar('Table')
 
 
 class ExcelXMLParser(object):
-    HEADER_DATA_XPATH = 'std:Worksheet/std:Table/std:Row[1]//std:Data'
-
     ns = {
         '': 'urn:schemas-microsoft-com:office:spreadsheet',
         'std': 'urn:schemas-microsoft-com:office:spreadsheet',
@@ -18,6 +16,10 @@ class ExcelXMLParser(object):
         'html': "http://www.w3.org/TR/REC-html40",
     }
 
+    HEADER_DATA_XPATH = 'std:Worksheet/std:Table/std:Row[1]//std:Data'
+    DATA_ROWS_XPATH = 'std:Worksheet/std:Table/std:Row'
+    CELL_DATA_XPATH = 'std:Cell/std:Data'
+
     def __init__(self, filepath: str):
         self.filepath = filepath
         self.root = ET.parse(filepath).getroot()  # type: ET
@@ -26,4 +28,10 @@ class ExcelXMLParser(object):
         return [v.text for v in self.root.findall(self.HEADER_DATA_XPATH, self.ns)]
 
     def parse_rows(self) -> Sequence[dict]:
-        return [{'ID': 651}]
+        header = self.header()
+        rows = self.root.findall(self.DATA_ROWS_XPATH, self.ns)[1:]
+        id_data = rows[0].find(self.CELL_DATA_XPATH, self.ns)
+
+        id2 = int(id_data.text)
+        id = 651
+        return [{'ID': id2}]

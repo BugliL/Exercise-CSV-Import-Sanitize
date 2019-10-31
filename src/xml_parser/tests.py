@@ -21,4 +21,4 @@ class XMLClassTest(unittest.TestCase):
         x = ExcelXMLParser(filepath="src/data/table1.xml")
         row = x.parse_rows()[0]
 
-        self.assertEqual(row['ID'], 651)
+        self.assertEqual(651, row['ID'])
