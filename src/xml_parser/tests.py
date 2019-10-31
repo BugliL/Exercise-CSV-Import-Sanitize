@@ -1,4 +1,5 @@
 import unittest
+import datetime
 
 from src.xml_parser.parser import ExcelXMLParser
 
@@ -24,3 +25,6 @@ class XMLClassTest(unittest.TestCase):
         self.assertEqual(651, row['ID'])
         self.assertEqual('GENERAL ARRANGEMENT DRAWING', row['Description'])
         self.assertEqual('PLANT', row['Category'])
+
+        row = x.parse_rows()[1]
+        self.assertEqual(datetime.datetime(year=2019, month=2, day=7), row['Date Forecast'])
