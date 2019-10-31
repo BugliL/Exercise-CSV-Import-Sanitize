@@ -9,6 +9,8 @@ Table = namedtuple('Table', 'header')  # TypeVar('Table')
 
 
 class ExcelXMLParser(object):
+    fields_to_ignore = ['Rev', 'Due Date', 'Transmittal', 'Status', ]
+
     NS = 'urn:schemas-microsoft-com:office:spreadsheet'
     ns = {
         '': NS, 'std': NS, 'ss': NS,
@@ -36,7 +38,7 @@ class ExcelXMLParser(object):
 
         select_index = lambda c, i: \
             int(c.attrib[self.ATTRIBUTE_INDEX_XPATH]) - 1 \
-            if self.ATTRIBUTE_INDEX_XPATH in c.attrib else i + 1
+                if self.ATTRIBUTE_INDEX_XPATH in c.attrib else i + 1
 
         fn = {
             'String': lambda x: str(x).strip(),
@@ -49,12 +51,12 @@ class ExcelXMLParser(object):
         lst = []
         for row in self.root.findall(self.DATA_ROWS_XPATH, self.ns)[1:]:
             i = -1
-            data = {k: None for k in header}
+            data = {k: None for k in header if k not in self.fields_to_ignore}
             for c in row.findall(self.CELL_XPATH, self.ns):
                 i = select_index(c, i)
                 d = c.find(self.CELL_DATA_XPATH, self.ns)
-                if d is not None:
-                    k = header[i]
+                k = header[i]
+                if d is not None and k not in self.fields_to_ignore:
                     format = fn.get(d.attrib[self.ATTRIBUTE_TYPE_XPATH], str)
                     data[k] = format(d.text)
 

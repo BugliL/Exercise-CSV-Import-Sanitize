@@ -28,7 +28,6 @@ class XMLClassTest(unittest.TestCase):
         self.assertEqual('PLANT', row['Category'])
 
         row = x.parse_rows()[1]
-        self.assertEqual(datetime.datetime(year=2019, month=2, day=7), row['Due Date'])
         self.assertEqual(None, row['Note'])
 
         row = x.parse_rows()[2]
