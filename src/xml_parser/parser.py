@@ -7,14 +7,15 @@ Table = namedtuple('Table', 'header')  # TypeVar('Table')
 
 
 class ExcelXMLParser(object):
+    HEADER_DATA_XPATH = 'std:Worksheet/std:Table/std:Row[1]//std:Data'
+    NS = "urn:schemas-microsoft-com:office:spreadsheet"
+    CELL_TAG = "{%s}Cell" % NS
+
+    ns = {'std': NS}
 
     def __init__(self, filepath: str):
+        self.filepath = filepath
         self.root = ET.parse(filepath).getroot()  # type: ET
 
     def header(self) -> Sequence[str]:
-        header_list = [
-            'ID', 'Rev', 'Description', 'Category', 'Document Code', 'Customer Code', 'Type', 'ARI',
-            'Penalty', 'Purchase', 'Executor', 'Controller', 'Approver', 'Owner', 'Note', 'Date Forecast',
-            'Due Date', 'Transmittal', 'Status', 'RifDow', 'Link'
-        ]
-        return header_list
+        return [v.text for v in self.root.findall(self.HEADER_DATA_XPATH, self.ns)]
