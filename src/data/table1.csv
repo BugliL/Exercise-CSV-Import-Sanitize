@@ -1,0 +1,15 @@
+ID,Rev,Description,Category,Document Code,Customer Code,Type,ARI,Penalty,Purchase,Executor,Controller,Approver,Owner,Note,Date Forecast,Due Date,Transmittal,Status,RifDow,Link
+651,0,GENERAL ARRANGEMENT DRAWING,PLANT,CRD700220,,VDR,A,False,False,GN,GG,MaC,MST,,2019-02-07,2019-02-07,,,,"
+    
+    "
+652,0,FOUNDATION DRAWING,PLANT,CRD700219,,VDR,A,False,False,GN,GG,MaC,MST,,2019-02-07,2019-02-07,,,,"
+    
+    "
+653,0,SUCTION VOLUME BOTTLE,PLANT,BO5166,,INT,I,False,False,GN,GG,MaC,MST,,2019-02-07,2019-02-07,,,,"
+    
+    "
+654,0,DISCHARGE VOLUME BOTTLE,PLANT,BO5164,,INT,I,False,False,GN,GG,MaC,MST,,2019-02-07,2019-02-07,,,,"
+    
+    "
+
+
