@@ -111,7 +111,8 @@
     <Cell><Data ss:Type="String">GG</Data></Cell>
     <Cell><Data ss:Type="String">MaC</Data></Cell>
     <Cell><Data ss:Type="String">MST</Data></Cell>
-    <Cell ss:Index="16" ss:StyleID="s62"><Data ss:Type="DateTime">2019-02-07T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="String">Prova</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2019-02-07T00:00:00.000</Data></Cell>
     <Cell ss:StyleID="s62"/>
     <Cell ss:Index="21" ss:StyleID="s63"><Data ss:Type="String">&#10;        &#10;    </Data></Cell>
    </Row>
@@ -150,7 +151,8 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>2</ActiveRow>
+     <ActiveRow>4</ActiveRow>
+     <ActiveCol>14</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
