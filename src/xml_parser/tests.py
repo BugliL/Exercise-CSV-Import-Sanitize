@@ -22,4 +22,5 @@ class XMLClassTest(unittest.TestCase):
         row = x.parse_rows()[0]
 
         self.assertEqual(651, row['ID'])
-        self.assertEqual('GENERAL ARRANGEMENT DRAWING', row['Category'])
+        self.assertEqual('GENERAL ARRANGEMENT DRAWING', row['Description'])
+        self.assertEqual('PLANT', row['Category'])
