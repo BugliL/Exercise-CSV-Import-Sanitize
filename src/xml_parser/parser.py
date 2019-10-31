@@ -1,11 +1,7 @@
-from xml.dom import minidom
 from collections import namedtuple
-from typing import TypeVar, Sequence
+from typing import Sequence
 
-
-class ExcelTable(object):
-    pass
-
+from xml.etree import ElementTree as ET
 
 Table = namedtuple('Table', 'header')  # TypeVar('Table')
 
@@ -13,12 +9,12 @@ Table = namedtuple('Table', 'header')  # TypeVar('Table')
 class ExcelXMLParser(object):
 
     def __init__(self, filepath: str):
-        self.document = minidom.parse(filepath)
+        self.root = ET.parse(filepath).getroot()  # type: ET
 
-    def tables(self) -> Sequence[Table]:
+    def header(self) -> Sequence[str]:
         header_list = [
             'ID', 'Rev', 'Description', 'Category', 'Document Code', 'Customer Code', 'Type', 'ARI',
             'Penalty', 'Purchase', 'Executor', 'Controller', 'Approver', 'Owner', 'Note', 'Date Forecast',
             'Due Date', 'Transmittal', 'Status', 'RifDow', 'Link'
         ]
-        return [(Table(header=header_list))]
+        return header_list
