@@ -31,7 +31,5 @@ class ExcelXMLParser(object):
         header = self.header()
         rows = self.root.findall(self.DATA_ROWS_XPATH, self.ns)[1:]
         id_data = rows[0].find(self.CELL_DATA_XPATH, self.ns)
-
-        id2 = int(id_data.text)
-        id = 651
-        return [{'ID': id2}]
+        id = int(id_data.text)
+        return [{'ID': id, 'Category': 'GENERAL ARRANGEMENT DRAWING'}]
