@@ -1,3 +1,4 @@
+from datetime import datetime
 from collections import namedtuple
 from typing import Sequence
 
@@ -31,12 +32,16 @@ class ExcelXMLParser(object):
         header = self.header()
         rows = self.root.findall(self.DATA_ROWS_XPATH, self.ns)[1:]
 
-        row = rows[0]
-        all_data = row.findall(self.CELL_DATA_XPATH, self.ns)
+        lst = []
+        for row in rows:
+            all_data = row.findall(self.CELL_DATA_XPATH, self.ns)
 
-        data = {
-            'ID': int(all_data[0].text),
-            'Description': all_data[2].text,
-            'Category': all_data[3].text,
-        }
-        return [data]
+            data = {
+                'ID': int(all_data[0].text),
+                'Description': all_data[2].text,
+                'Category': all_data[3].text,
+                'Date Forecast': datetime.strptime(all_data[13].text, "%Y-%m-%dT%H:%M:%S.%f"),
+            }
+
+            lst.append(data)
+        return lst
