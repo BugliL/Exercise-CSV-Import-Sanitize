@@ -91,7 +91,6 @@ class Table(object):
 class Row(object):
     def __init__(self, row: Dict, EXCLUDE: List):
         self.row = {k: v for k, v in row.items() if k not in EXCLUDE} if EXCLUDE else row
-        x = 18
 
     def fill(self, model_object):
         for k, v in self.row.items():
