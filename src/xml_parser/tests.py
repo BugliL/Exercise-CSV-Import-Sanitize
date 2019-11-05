@@ -28,6 +28,7 @@ class XMLClassTest(unittest.TestCase):
         self.assertEqual(651, row['id'])
         self.assertEqual('GENERAL ARRANGEMENT DRAWING', row['description'])
         self.assertEqual('PLANT', row['category'])
+        self.assertEqual('CRD700220', row['document_code'])
 
         row = self.parser.parse_rows()[1]
         self.assertEqual(None, row['note'])
