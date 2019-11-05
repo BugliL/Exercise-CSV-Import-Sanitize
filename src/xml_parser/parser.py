@@ -1,12 +1,7 @@
 from datetime import datetime
-from collections import namedtuple
-from functools import reduce
-from typing import Sequence, List
+from typing import Sequence
 
 from xml.etree import ElementTree as ET, ElementTree
-
-
-# Table = namedtuple('Table', 'header')  # TypeVar('Table')
 
 
 class Contants(object):
