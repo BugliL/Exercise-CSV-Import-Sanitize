@@ -118,6 +118,10 @@ class Row(object):
     def to_dict(self) -> dict:
         return self.row
 
+    @property
+    def id(self):
+        return self.to_dict()['id']
+
 
 class ExcelXMLParser(object):
 
