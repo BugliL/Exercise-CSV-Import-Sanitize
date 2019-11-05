@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Sequence
+from typing import Sequence, Dict, List
 
 from xml.etree import ElementTree as ET, ElementTree
 
@@ -88,13 +88,29 @@ class Table(object):
         raise NotImplementedError()
 
 
+class Row(object):
+    def __init__(self, row: Dict, EXCLUDE: List):
+        self.row = {k: v for k, v in row.items() if k not in EXCLUDE} if EXCLUDE else row
+        x = 18
+
+    def fill(self, model_object):
+        for k, v in self.row.items():
+            try:
+                setattr(model_object, k, v)
+            except AttributeError:
+                print(model_object, k, v, model_object is None)
+                raise
+
+        return model_object
+
+
 class ExcelXMLParser(object):
 
     def __init__(self, filepath: str):
         self.filepath = filepath
         self.root = ET.parse(filepath).getroot()  # type: ET
 
-    def header(self) -> Sequence[str]:
+    def header(self) -> List[str]:
         return [
             v.text.lower().replace(' ', '_') for v in \
             self.root.findall(Contants.HEADER_DATA_XPATH, Contants.ALL_NS)
@@ -117,3 +133,6 @@ class ExcelXMLParser(object):
             lst.append(data)
 
         return lst
+
+    def objects(self, EXCLUDE: List = None):
+        return [Row(row=r, EXCLUDE=EXCLUDE or []) for r in self.parse_rows()]
