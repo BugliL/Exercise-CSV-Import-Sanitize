@@ -1,3 +1,4 @@
+import io
 from datetime import datetime
 from typing import Sequence, Dict, List
 
@@ -90,10 +91,14 @@ class Table(object):
 
 class Row(object):
     def __init__(self, row: Dict, EXCLUDE: List):
-        self.row = {k: v for k, v in row.items() if k not in EXCLUDE} if EXCLUDE else row
+        self.row = row
+        self.EXCLUDE = EXCLUDE
+
+    def filtered(self):
+        return {k: v for k, v in self.row.items() if k not in self.EXCLUDE} if self.EXCLUDE else self.row
 
     def fill(self, model_object):
-        for k, v in self.row.items():
+        for k, v in self.filtered().items():
             try:
                 setattr(model_object, k, v)
             except AttributeError:
@@ -102,16 +107,20 @@ class Row(object):
 
         return model_object
 
+    @property
+    def has_id(self):
+        return bool(self.row['id'] if 'id' in self.row.keys() else False)
+
 
 class ExcelXMLParser(object):
 
-    def __init__(self, filepath: str):
+    def __init__(self, filepath: [str, io.StringIO]):
         self.filepath = filepath
         self.root = ET.parse(filepath).getroot()  # type: ET
 
     def header(self) -> List[str]:
         return [
-            v.text.lower().replace(' ', '_') for v in \
+            v.text.lower().replace(' ', '_') for v in
             self.root.findall(Contants.HEADER_DATA_XPATH, Contants.ALL_NS)
         ]
 
