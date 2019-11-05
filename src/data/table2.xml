@@ -1,0 +1,416 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Lorenzo Bugli</LastAuthor>
+  <Created>2019-11-05T15:24:08Z</Created>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>6310</WindowHeight>
+  <WindowWidth>16000</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="table (7)">
+  <Table ss:ExpandedColumnCount="21" ss:ExpandedRowCount="48" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="14.5">
+   <Column ss:Index="2" ss:Width="22.5"/>
+   <Column ss:Width="189.5"/>
+   <Column ss:Index="15" ss:Width="114.5"/>
+   <Column ss:Width="69"/>
+   <Column ss:Width="55.5"/>
+   <Row>
+    <Cell><Data ss:Type="String">ID</Data></Cell>
+    <Cell><Data ss:Type="String">Rev</Data></Cell>
+    <Cell><Data ss:Type="String">Description</Data></Cell>
+    <Cell><Data ss:Type="String">Category</Data></Cell>
+    <Cell><Data ss:Type="String">Document Code</Data></Cell>
+    <Cell><Data ss:Type="String">Customer Code</Data></Cell>
+    <Cell><Data ss:Type="String">Type</Data></Cell>
+    <Cell><Data ss:Type="String">ARIP</Data></Cell>
+    <Cell><Data ss:Type="String">Penalty</Data></Cell>
+    <Cell><Data ss:Type="String">Purchase</Data></Cell>
+    <Cell><Data ss:Type="String">Executor</Data></Cell>
+    <Cell><Data ss:Type="String">Controller</Data></Cell>
+    <Cell><Data ss:Type="String">Approver</Data></Cell>
+    <Cell><Data ss:Type="String">Owner</Data></Cell>
+    <Cell><Data ss:Type="String">Note</Data></Cell>
+    <Cell><Data ss:Type="String">Date Forecast</Data></Cell>
+    <Cell><Data ss:Type="String">Due Date</Data></Cell>
+    <Cell><Data ss:Type="String">Transmittal</Data></Cell>
+    <Cell><Data ss:Type="String">Status</Data></Cell>
+    <Cell><Data ss:Type="String">RifDow</Data></Cell>
+    <Cell><Data ss:Type="String">Link</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">ASDF</Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">INT</Data></Cell>
+    <Cell><Data ss:Type="String">I</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">LBZ</Data></Cell>
+    <Cell><Data ss:Type="String">ABT</Data></Cell>
+    <Cell><Data ss:Type="String">AF</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String">preliminary 26/07/2019</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2019-09-06T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2019-10-12T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">123</Data></Cell>
+    <Cell><Data ss:Type="String">COMPLETED</Data></Cell>
+    <Cell ss:Index="21" ss:StyleID="s63"><Data ss:Type="String">&#10;        â€”&#10;    </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Oil mist separator </Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">INT</Data></Cell>
+    <Cell><Data ss:Type="String">I</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">LBR</Data></Cell>
+    <Cell><Data ss:Type="String">ABT</Data></Cell>
+    <Cell><Data ss:Type="String">AF</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String">preliminary 26/07/2019</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2019-10-10T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2019-10-10T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">124</Data></Cell>
+    <Cell><Data ss:Type="String">COMPLETED</Data></Cell>
+    <Cell ss:Index="21" ss:StyleID="s63"><Data ss:Type="String">&#10;        â€”&#10;    </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Intestage and after coolers</Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">INT</Data></Cell>
+    <Cell><Data ss:Type="String">I</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">LBR</Data></Cell>
+    <Cell><Data ss:Type="String">ABT</Data></Cell>
+    <Cell><Data ss:Type="String">AF</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String">giÃ&#160; inviato</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2019-07-12T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2019-07-12T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">125</Data></Cell>
+    <Cell><Data ss:Type="String">COMPLETED</Data></Cell>
+    <Cell ss:Index="21" ss:StyleID="s63"><Data ss:Type="String">&#10;        â€”&#10;    </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Control valves (anti-surge) blow off</Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">INT</Data></Cell>
+    <Cell><Data ss:Type="String">I</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">LBR</Data></Cell>
+    <Cell><Data ss:Type="String">ABT</Data></Cell>
+    <Cell><Data ss:Type="String">AF</Data></Cell>
+    <Cell ss:Index="16" ss:StyleID="s62"><Data ss:Type="DateTime">2019-09-13T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2019-09-13T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">126</Data></Cell>
+    <Cell><Data ss:Type="String">COMPLETED</Data></Cell>
+    <Cell ss:Index="21" ss:StyleID="s63"><Data ss:Type="String">H:\</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Discharge Check valve (supplied loose)</Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">INT</Data></Cell>
+    <Cell><Data ss:Type="String">I</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">LBR</Data></Cell>
+    <Cell><Data ss:Type="String">ABT</Data></Cell>
+    <Cell><Data ss:Type="String">AF</Data></Cell>
+    <Cell ss:Index="16" ss:StyleID="s62"><Data ss:Type="DateTime">2019-09-27T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2019-09-27T00:00:00.000</Data></Cell>
+    <Cell><Data ss:Type="Number">127</Data></Cell>
+    <Cell><Data ss:Type="String">COMPLETED</Data></Cell>
+    <Cell><Data ss:Type="String">Prova</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">&#10;        â€”&#10;    </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Expansion Joints (flexible joints) </Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">INT</Data></Cell>
+    <Cell><Data ss:Type="String">I</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">LBR</Data></Cell>
+    <Cell><Data ss:Type="String">ABT</Data></Cell>
+    <Cell><Data ss:Type="String">AF</Data></Cell>
+    <Cell ss:Index="16" ss:StyleID="s62"><Data ss:Type="DateTime">2019-09-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2019-09-20T00:00:00.000</Data></Cell>
+    <Cell ss:Index="21" ss:StyleID="s63"><Data ss:Type="String">&#10;        â€”&#10;    </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Main Motor Coordination Document</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">EST77732</Data></Cell>
+    <Cell><Data ss:Type="String">VDR</Data></Cell>
+    <Cell><Data ss:Type="String">R</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">LBR</Data></Cell>
+    <Cell><Data ss:Type="String">ABT</Data></Cell>
+    <Cell><Data ss:Type="String">AF</Data></Cell>
+    <Cell ss:Index="16" ss:StyleID="s62"><Data ss:Type="DateTime">2019-08-12T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2019-08-12T00:00:00.000</Data></Cell>
+    <Cell ss:Index="21" ss:StyleID="s63"><Data ss:Type="String">&#10;        â€”&#10;    </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="2"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">Project BOM</Data></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">INT</Data></Cell>
+    <Cell><Data ss:Type="String">I</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="Boolean">1</Data></Cell>
+    <Cell><Data ss:Type="String">LBR</Data></Cell>
+    <Cell><Data ss:Type="String">ABT</Data></Cell>
+    <Cell><Data ss:Type="String">AF</Data></Cell>
+    <Cell ss:Index="16" ss:StyleID="s62"><Data ss:Type="DateTime">2019-07-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="DateTime">2019-07-19T00:00:00.000</Data></Cell>
+    <Cell ss:Index="21" ss:StyleID="s63"><Data ss:Type="String">&#10;        â€”&#10;    </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+   <Row>
+    <Cell ss:Index="16" ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="21" ss:StyleID="s63"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>12</ActiveRow>
+     <ActiveCol>10</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

@@ -108,8 +108,15 @@ class Row(object):
         return model_object
 
     @property
-    def has_id(self):
+    def has_id(self) -> bool:
         return bool(self.row['id'] if 'id' in self.row.keys() else False)
+
+    @property
+    def is_empty(self) -> bool:
+        return not any([bool(x) for x in self.row.values()])
+
+    def to_dict(self) -> dict:
+        return self.row
 
 
 class ExcelXMLParser(object):
@@ -138,7 +145,8 @@ class ExcelXMLParser(object):
                 if cell.data is not None:
                     data[k] = cell.value
 
-            lst.append(data)
+            if not Row(row=data, EXCLUDE=[]).is_empty:
+                lst.append(data)
 
         return lst
 

@@ -34,7 +34,8 @@ class XMLClassTest(unittest.TestCase):
         cls.maxDiff = None
 
     def setUp(self):
-        self.parser = ExcelXMLParser(filepath="src/data/table1.xml")
+        self.parser1 = ExcelXMLParser(filepath="src/data/table1.xml")
+        self.parser2 = ExcelXMLParser(filepath="src/data/table2.xml")
 
     def test_header(self):
         """When Readed throw class Than get header"""
@@ -45,24 +46,24 @@ class XMLClassTest(unittest.TestCase):
                       'Note', 'Date Forecast', 'Due Date', 'Transmittal', 'Status', 'RifDow', 'Link', ]
         ]
 
-        self.assertEqual(header_list, self.parser.header())
+        self.assertEqual(header_list, self.parser1.header())
 
     def test_parsing_rows(self):
         """When readed throw class Than parse rows"""
-        row = self.parser.parse_rows()[0]
+        row = self.parser1.parse_rows()[0]
 
         self.assertEqual(None, row['id'])
         self.assertEqual('GENERAL ARRANGEMENT DRAWING', row['description'])
         self.assertEqual('PLANT', row['category'])
         self.assertEqual('CRD700220', row['document_code'])
 
-        row = self.parser.parse_rows()[1]
+        row = self.parser1.parse_rows()[1]
         self.assertEqual(None, row['note'])
 
-        row = self.parser.parse_rows()[2]
+        row = self.parser1.parse_rows()[2]
         self.assertEqual('Prova', row['note'])
 
-        row = self.parser.parse_rows()[-1]
+        row = self.parser1.parse_rows()[-1]
         self.assertEqual('', row['link'])
 
     def test_populate_model(self):
@@ -70,7 +71,7 @@ class XMLClassTest(unittest.TestCase):
 
         EXCLUDE_PARAM_LIST = ['id', 'rev', 'status', 'transmittal', 'due_date', ]
         model = DjangoModel()
-        row = self.parser.objects(EXCLUDE=EXCLUDE_PARAM_LIST)[0]  # type: Row
+        row = self.parser1.objects(EXCLUDE=EXCLUDE_PARAM_LIST)[0]  # type: Row
         row.fill(model)
 
         self.assertEqual('CRD700220', model.document_code)
@@ -86,11 +87,11 @@ class XMLClassTest(unittest.TestCase):
 
         model0 = DjangoModel()
         model0.project = 12
-        row0 = self.parser.objects(EXCLUDE=EXCLUDE_PARAM_LIST)[0]  # type: Row
+        row0 = self.parser1.objects(EXCLUDE=EXCLUDE_PARAM_LIST)[0]  # type: Row
         row0.fill(model0)
 
         model1 = DjangoModel()
-        row1 = self.parser.objects(EXCLUDE=EXCLUDE_PARAM_LIST)[1]  # type: Row
+        row1 = self.parser1.objects(EXCLUDE=EXCLUDE_PARAM_LIST)[1]  # type: Row
         row1.fill(model1)
         model1.project = 12
         dummy_list = [model0, model1]
@@ -101,7 +102,7 @@ class XMLClassTest(unittest.TestCase):
 
         record_list = [
             fill_model(row, set_project(get_model(row)))
-            for row in self.parser.objects(EXCLUDE=EXCLUDE_PARAM_LIST)
+            for row in self.parser1.objects(EXCLUDE=EXCLUDE_PARAM_LIST)
         ]
 
         self.assertListEqual(dummy_list, record_list[:2])
@@ -110,3 +111,8 @@ class XMLClassTest(unittest.TestCase):
         self.assertEqual('CRD700220', dummy_list[0].document_code)
         self.assertEqual(12, dummy_list[0].project)
         self.assertNotEqual('ayeye', dummy_list[0].document_code)
+
+    def test_parser2(self):
+        """When Readed throw class Than remove empty rows"""
+        rows = self.parser2.parse_rows()
+        self.assertTrue(all([bool(r['description']) for r in rows]))
