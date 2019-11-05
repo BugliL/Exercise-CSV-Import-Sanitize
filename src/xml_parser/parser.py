@@ -80,7 +80,7 @@ class Table(object):
 
     def _header(self, table_element: ElementTree):
         return [
-            v.text for v in \
+            v.text.lower().replace(' ', '_') for v in \
             table_element.findall(Contants.HEADER_DATA_XPATH, Contants.ALL_NS)
         ]
 
@@ -95,7 +95,10 @@ class ExcelXMLParser(object):
         self.root = ET.parse(filepath).getroot()  # type: ET
 
     def header(self) -> Sequence[str]:
-        return [v.text for v in self.root.findall(Contants.HEADER_DATA_XPATH, Contants.ALL_NS)]
+        return [
+            v.text.lower().replace(' ', '_') for v in \
+            self.root.findall(Contants.HEADER_DATA_XPATH, Contants.ALL_NS)
+        ]
 
     def parse_rows(self) -> Sequence[dict]:
         header = self.header()
